@@ -28,6 +28,18 @@ def create_login_message(username, password):
         }
     }
 
+def server_status_message():
+    return {
+  "type": "server_status",
+  "payload": {
+    "status": "online",
+    "uptime_seconds": 3600,
+    "connected_users": 45,
+    "total_messages": 15234,
+    "version": "1.0.0"
+  }
+}
+
 def serialize_message(message):
     return json.dumps(message)
 
